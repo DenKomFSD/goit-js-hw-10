@@ -1,0 +1,8 @@
+input:disabled {
+  border-color: (128, 128, 128);
+  color: rgb(128, 128, 128);
+}
+button:disabled {
+  background: rgb(207, 207, 207);
+  color: rgb(152, 152, 152);
+}
