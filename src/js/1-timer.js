@@ -25,8 +25,11 @@ const options = {
     if (selectedDates[0] - timeNow < 0) {
       startBtn.setAttribute('disabled', '');
       iziToast.warning({
-        title: 'Caution',
-        message: 'You forgot important data',
+        message: 'Please choose a date in the future',
+        pauseOnHover: true,
+        position: 'topRight',
+        color: '#EF4040',
+        messageColor: '#fff',
       });
     } else {
       startBtn.removeAttribute('disabled', '');
@@ -53,8 +56,11 @@ function setTimer() {
       secs.textContent = addLeadingZero(convertedTime.seconds);
     } else {
       iziToast.success({
-        title: 'OK',
         message: 'Successfully inserted record!',
+        pauseOnHover: true,
+        position: 'topRight',
+        color: 'green',
+        messageColor: '#fff',
       });
       clearInterval(calculatedTime);
     }
